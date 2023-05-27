@@ -25,7 +25,8 @@
             <a class="navbar-brand" href="{% url 'lista_zapatillas' %}">Marca</a>
             <a class="navbar-brand" href="{% url 'info_marca' %}">Sobre nosotros</a>
             <a class="navbar-brand" href="{% url 'comentarios' %}">comentarios</a>
-            <a class="btn btn-primary" href="">Registro</a>
+            <a class="btn btn-primary" href="{% url "registro" %}">Registro</a>
+            <a class="btn btn-primary" href="{% url "login" %}">Ingresar a tu cuenta</a>
         </div>
     </nav>
 
@@ -35,8 +36,10 @@
     {% endblock infomarca %}
     {% block comentario %}
     {% endblock comentario %}
-    {% block perfiles %}
-    {% endblock perfiles %}
+    {% block registro %}
+    {% endblock registro %}
+    {% block login %}
+    {% endblock login %}
    
 
     <!-- Footer-->

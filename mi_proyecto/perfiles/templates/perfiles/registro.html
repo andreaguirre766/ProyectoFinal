@@ -1,9 +1,12 @@
 {% extends "Blog/base.html" %}
 
-{% block perfiles %}
-<form method="post">
- {% csrf_token %}
- {{ form.as_p }}
- <input type="submit" value="Registrarse" />
-</form>
-{% endblock perfiles %}
+{% block registro %}
+<div style="display: flex; justify-content: center;">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Registrarse" />
+    </form>
+  </div>
+  
+{% endblock registro %}
