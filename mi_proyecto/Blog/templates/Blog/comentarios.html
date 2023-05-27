@@ -1,0 +1,21 @@
+{% extends 'Blog/base.html' %}
+
+{% block comentario %}
+  <h2>Comentarios </h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Agregar comentario</button>
+  </form>
+
+  <hr>
+
+  <h3>Comentarios existentes</h3>
+  {% for comentario in comentarios %}
+    <div>
+      <h4>{{ comentario.marca }}</h4>
+      <p>{{ comentario.comentario }}</p>
+      <small>{{ comentario.fecha_creacion }}</small>
+    </div>
+  {% endfor %}
+{% endblock comentario %}
