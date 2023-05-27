@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from mi_proyecto.views import saludar , saludar_con_hora, inicio
+from mi_proyecto.views import saludar , saludar_con_hora, inicio , crear
+
+
 
 
 
@@ -26,5 +28,7 @@ urlpatterns = [
     path("nike/", include("Blog.urls")),
     path("Miblog/", saludar),
     path("saludo/", saludar_con_hora),
+    path("crear/", crear),
+    path("perfiles/", include("perfiles.urls")),
    
 ]
