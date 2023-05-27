@@ -35,7 +35,9 @@ def agregar_comentario(request):
 
     comentarios = Comentario.objects.all()
     context = {'form': form, 'comentarios': comentarios}
-    return render(request, 'blog/comentarios.html', context)
+    return render(request, 'blog/comentarios.html', context) 
+
+#sadada
 
 
 
