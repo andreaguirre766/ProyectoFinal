@@ -25,8 +25,12 @@
             <a class="navbar-brand" href="{% url 'lista_zapatillas' %}">Marca</a>
             <a class="navbar-brand" href="{% url 'info_marca' %}">Sobre nosotros</a>
             <a class="navbar-brand" href="{% url 'comentarios' %}">comentarios</a>
+            {% if user.is_authenticated %}
+            <a class="btn btn-primary" href="{% url "logout" %}">Cerrar sesion</a>
+            {% else %}
+            <a class="btn btn-primary" href="{% url "login" %}">Iniciar sesion</a>
             <a class="btn btn-primary" href="{% url "registro" %}">Registro</a>
-            <a class="btn btn-primary" href="{% url "login" %}">Ingresar a tu cuenta</a>
+            {% endif %}
         </div>
     </nav>
 
@@ -40,6 +44,8 @@
     {% endblock registro %}
     {% block login %}
     {% endblock login %}
+    {% block logout %}
+    {% endblock logout %}
    
 
     <!-- Footer-->

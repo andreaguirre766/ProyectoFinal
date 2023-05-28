@@ -3,6 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Comentario
 from .forms import ComentarioForm
 from Blog.models import Zapatilla
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def listar_zapatillas(request):
@@ -24,6 +26,7 @@ def info_marca(request):
 def registro(request):
     return render(request, 'registro.html')
 
+@login_required
 def agregar_comentario(request):
     if request.method == 'POST':
         form = ComentarioForm(request.POST)

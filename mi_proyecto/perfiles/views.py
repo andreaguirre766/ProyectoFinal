@@ -48,7 +48,7 @@ def login_view(request):
         context={'form': form},
     )
 
-   
-   
+class CustomLogoutView(LogoutView):
+   template_name = 'perfiles/logout.html'
 
 
