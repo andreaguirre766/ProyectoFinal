@@ -31,16 +31,18 @@ def agregar_comentario(request):
     if request.method == 'POST':
         form = ComentarioForm(request.POST)
         if form.is_valid():
-            form.save()
+            comentario = form.save(commit=False)
+            if request.user.is_authenticated:
+                comentario.creador = request.user
+            comentario.save()
             form = ComentarioForm()
     else:
         form = ComentarioForm()
 
     comentarios = Comentario.objects.all()
     context = {'form': form, 'comentarios': comentarios}
-    return render(request, 'blog/comentarios.html', context) 
+    return render(request, 'blog/comentarios.html', context)
 
-#sadada
 
 
 
