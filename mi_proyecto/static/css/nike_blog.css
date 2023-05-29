@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos de navegación */
+.navbar {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #333;
+    font-weight: 700;
+}
+
+.navbar .btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilos de contenido */
+.container {
+    max-width: 1200px;
+}
+
+/* Estilos de pie de página */
+.footer {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer .fs-3 {
+    font-size: 1.5rem;
+}
+
+.footer .bi {
+    color: #333;
+}
+
+.footer .bi:hover {
+    color: #007bff;
+}
+
+/* Estilos de botones */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
+}
+
+/* Estilos de dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
