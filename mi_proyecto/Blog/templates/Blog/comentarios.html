@@ -22,9 +22,16 @@
       <p>{{ comentario.comentario }}</p>
       <small>{{ comentario.fecha_creacion }}</small>
       <p>Usuario: {{ comentario.creador.username }}</p>  <!-- Aquí se muestra el nombre del creador -->
+      {% if request.user.is_authenticated and request.user == comentario.creador %}
+        <form action="{% url 'eliminar_comentario' comentario.id %}" method="post">
+          {% csrf_token %}
+          <button type="submit">Eliminar</button>
+        </form>
+      {% endif %}
     </div>
   {% endfor %}
 {% endblock comentario %}
+
 
 
 

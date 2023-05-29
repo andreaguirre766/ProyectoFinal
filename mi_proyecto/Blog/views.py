@@ -43,6 +43,11 @@ def agregar_comentario(request):
     context = {'form': form, 'comentarios': comentarios}
     return render(request, 'blog/comentarios.html', context)
 
+def eliminar_comentario(request, comentario_id):
+    comentario = Comentario.objects.get(id=comentario_id)
+    comentario.delete()
+    return redirect('comentarios')
+
 
 
 

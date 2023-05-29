@@ -2,6 +2,7 @@
 
 {% block lista_zapatillas %}
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
   <title>Tienda de Zapatillas - Nike</title>
@@ -106,12 +107,12 @@
     <ul>
       {% for zapas in zapatillas %}
         <li class="product-card">
-          <img src="{{ zapas.imagen }}" alt="{{ zapas.modelo }}">
+          <img src="{% static 'imagenes/nike.jpg' %}" alt="{{ zapas.modelo }}">
           <div class="product-details">
             <h2 class="product-title">{{ zapas.modelo }}</h2>
             <p class="product-price">{{ zapas.precio }}</p>
             <p class="product-description">{{ zapas.descripcion }}</p>
-            <button class="button">Comprar</button>
+            <button class="button">+INFO</button>
           </div>
         </li>
       {% endfor %}
@@ -120,4 +121,5 @@
 </body>
 </html>
 
-  {% endblock lista_zapatillas %}
+{% endblock lista_zapatillas %}
+
