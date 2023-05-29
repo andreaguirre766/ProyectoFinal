@@ -6,7 +6,7 @@
     {% csrf_token %}
     {{ form.as_p }}
     {% if request.user.is_authenticated %}
-      <p>Nombre del creador: {{ request.user.username }}</p>  <!-- Aquí se muestra el nombre del creador si está logueado -->
+      <p>Nombre del usuario: {{ request.user.username }}</p>  <!-- Aquí se muestra el nombre del creador si está logueado -->
     {% else %}
       <p>Nombre del creador: Invitado</p>  <!-- Aquí se muestra un nombre genérico si no está logueado -->
     {% endif %}
@@ -21,7 +21,7 @@
       <h4>{{ comentario.marca }}</h4>
       <p>{{ comentario.comentario }}</p>
       <small>{{ comentario.fecha_creacion }}</small>
-      <p>Nombre del creador: {{ comentario.creador.username }}</p>  <!-- Aquí se muestra el nombre del creador -->
+      <p>Usuario: {{ comentario.creador.username }}</p>  <!-- Aquí se muestra el nombre del creador -->
     </div>
   {% endfor %}
 {% endblock comentario %}
