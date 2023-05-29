@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from perfiles.models import Avatar
+
 
 
 
@@ -19,3 +21,13 @@ class UserUpdateForm(forms.ModelForm):
     class Meta:
        model = User
        fields = ['last_name', 'first_name', 'email']
+       
+       
+       from perfiles.models import Avatar
+
+# Agregar al final del archivo
+class AvatarFormulario(forms.ModelForm):
+
+   class Meta:
+       model = Avatar
+       fields = ['imagen']
